@@ -1,6 +1,6 @@
 "use strict";
 
-let url = "http://jservice.io/api/random?count=1"
+let url = "http://jservice.io/api/random"
 let news = fetch(url)
 news
 .then(resp => resp.json())
