@@ -14,7 +14,6 @@
     line-height: 60px;   
     border: solid 3px;
     border-color: red;
-    transition: background-color 0.6s, transform 0.5s;
     letter-spacing: 4px;
     border-radius: 10px;
 }
@@ -49,7 +48,6 @@
     display: block;
     height: 60px;
     background-color: lightgrey;
-    transition: background-color 0.6s, transform 0.5s;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -60,14 +58,20 @@
     border-color: red;
 }
 
-#button:active {
-    background-color: brown;
-    transform: scale(103%);
+@keyframes push {
+    from {
+        background-color: lightgrey;
+    }
+    50% {
+        background-color: brown;
+        transform: scale(104%);
+    }
+    to {
+        background-color: lightgrey;
+        transform: scale(100%);
+    }
 }
 
-#title:active {
-    background-color: brown;
-    transform: scale(103%);
+.anime {
+    animation: push 0.5s;
 }
-
-    
